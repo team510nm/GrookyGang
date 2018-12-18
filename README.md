@@ -7,5 +7,6 @@ A tutorial with set lessons to teach you how to learn basic java then make a pro
 
 
 Lesson Plan
+
 1) basic java
 2) ???
