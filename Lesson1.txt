@@ -1,0 +1,76 @@
+#####Lesson Plan##########
+1) Vars
+2) Conditionals
+3) Usage of Objects
+#####1#####
+###Text###
+Variables can be used to store info.
+To define a variable, write its type followed by its name then what it equals (after an equal sign).
+For example, to create a string variable called foo, you would write:
+
+/---------------------\
+| String foo = "Test" |
+\---------------------/
+
+Try it below, create an integer variable called 'world', and have it equal 3
+
+
+###Code###
+class JavaTest {public static void main(String[] args) {
+// Code Here
+System.out.println(world);
+}}
+
+
+
+
+###Output###
+3
+#####2#####
+###Text###
+Variables can be used to store info.
+To define a variable, write its type followed by its name then what it equals (after an equal sign).
+For example, to create a string variable called foo, you would write:
+
+/---------------------\
+| String foo = "Test" |
+\---------------------/
+
+Try it below, create an integer variable called 'world', and have it equal 3
+
+
+###Code###
+class JavaTest {public static void main(String[] args) {
+// Code Here
+System.out.println(world);
+}}
+
+
+
+
+###Output###
+3
+#####3#####
+###Text###
+Variables can be used to store info.
+To define a variable, write its type followed by its name then what it equals (after an equal sign).
+For example, to create a string variable called foo, you would write:
+
+/---------------------\
+| String foo = "Test" |
+\---------------------/
+
+Try it below, create an integer variable called 'world', and have it equal 3
+
+
+###Code###
+class JavaTest {public static void main(String[] args) {
+// Code Here
+System.out.println(world);
+}}
+
+
+
+
+###Output###
+3
