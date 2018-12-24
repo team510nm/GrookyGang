@@ -1,0 +1,8 @@
+#####Lesson Plan#####
+1- Variables
+2- Object Usage
+3- Conditional Statements (Ifs and elses)
+#####1#####
+###Text###
+This first lesson is how to use variables in Java.	
+###Java Template###
