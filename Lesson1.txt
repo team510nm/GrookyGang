@@ -7,16 +7,19 @@
 Variables are values that can be changed and be used in conditional statements. (if statements etc.)
 
 NOTE: Can write int for integer. float can be lowercase(better than uppercase). String has to be capital
-There are three primative types of variables:
+There are three primitive types of variables:
 - Integers
 - Strings
 - Floats
 
-Integers store whole numbers both positve and negative.
+Integers store whole numbers both positive and negative.
 Strings store texts (like inputs)
 Floats store numbers with decimal points in them. (3.14)
 
+In Java, rather than floats, we use doubles as they can store more information. A double is not a primitive variable.
+
 In order to create variables in Java, first write the type of variable it is (integers, strings or floats) followed by the name of the variable. Then write what it's value after putting an equal sign.
+Only Primitive variable types have to be capitalized.
 
 For example, to create a string variable called foo, you would write:
 
@@ -26,20 +29,27 @@ For example, to create a string variable called foo, you would write:
 
 After the creation of the variable, you are able to modify and manipulate its value without having to specify the type of variable. In order to manipulate the variable, first put the name of the variable then write the new value after an equal sign.
 
-For example, to edit a float called pie, you would write:
+For example, to edit a double called pie, you would write:
 
 /------------\
 | pie = 3.15 |
 \------------/
-
-For your first test, create a float variable called eso and have it equal 86.45.
+###Requirements###
+For your first test, create a double variable called eso and have it equal 86.45.
 For your second test, there will be a string variable called hello and you will have to change its value to world.
 ###Code###
 class JavaTest {public static void main(String[] args) {
+
+
+// Pre User
+String hello = "I got a 4tb hard drive for $70! Now I can actually play ESO.";
+
 // Code Here
+
+//Post User
 eso += 20.5;
-System.out.println(eso)
-System.out.println(hello)
+System.out.println(eso);
+System.out.println(hello);
 }}
 
 
@@ -58,9 +68,9 @@ For example, to create a string variable called foo, you would write:
 | String foo = "Test" |
 \---------------------/
 
+
+###Requirements###
 Try it below, create an integer variable called 'world', and have it equal 3
-
-
 ###Code###
 class JavaTest {public static void main(String[] args) {
 // Code Here
@@ -82,9 +92,9 @@ For example, to create a string variable called foo, you would write:
 | String foo = "Test" |
 \---------------------/
 
+
+###Requirements###
 Try it below, create an integer variable called 'world', and have it equal 3
-
-
 ###Code###
 class JavaTest {public static void main(String[] args) {
 // Code Here

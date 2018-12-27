@@ -4,12 +4,26 @@
 @Date of creation: 2018-12-23 - 21:35
 """
 
+
 from os import popen, system
 '''
-out = popen("echo \"Test\"").read()
+out = pOpen("echo \"Test\"").read()
 
 print(out)
 '''
+
+preCode = '''/*
+Hello. Welcome to the Code Editor.
+This is where you will write your java code.
+
+To save, press [Ctrl+O] then [Enter]
+To exit, press [Ctrl+X]
+*/'''
+
+reminder = """/*
+Remember to add a ; at the end of every line.
+Start coding after this comment ends.
+*/"""
 
 openFile = open("Lesson1.txt")
 data = openFile.read().split("#####")
@@ -20,7 +34,7 @@ lesson = {}
 for x in range(0,len(data),2):
 	lesson[data[x]] = data[x+1]
 
-## Each seperate sub lesson ##
+## Each separate sub lesson ##
 for x in range(1,4):
 	lesson[str(x)] = lesson[str(x)].split("###")
 	while '' in lesson[str(x)]:
@@ -37,7 +51,7 @@ for x in range(1,4):
 
 
 
-for x in range(1,4):
+for x in range(1,2):
 
 	ln = str(x)
 
@@ -45,7 +59,10 @@ for x in range(1,4):
 
 	print(lesson[ln]["Text"])
 
-	usercode = ""
+	input("Press [Enter] to continue onto the testing portion.")
+
+	'''
+	userCode = ""
 
 	while True:
 		currentLine = input("Enter Code, type 'exit()' to quit:\n")
@@ -55,13 +72,31 @@ for x in range(1,4):
 			if currentLine[-1:] != ";":
 				print("Invalid, you need a ';' at the end of every line")
 			else:
-				usercode += currentLine
+				userCode += currentLine
 
 		print("")
+	'''
+
+	assignment = lesson[ln]["Requirements"]
+
+	beforeCode = preCode
+	beforeCode += "\n\n/*\nYour requirements for this assignment are:{}*/\n\n".format(assignment)
+	beforeCode += reminder
+
+
+	tempFile = open("TempEditor.java","w")
+	tempFile.write(beforeCode)
+	tempFile.close()
+
+	system("nano TempEditor.java")
+	tempFile = open("TempEditor.java")
+	userCode = tempFile.read()
+	tempFile.close()
+	system("rm TempEditor.java")
 
 	code = lesson[ln]["Code"]
 
-	code = code.replace("// Code Here", usercode)
+	code = code.replace("// Code Here", userCode)
 
 
 	openFile = open("JavaTest.java","w")
@@ -83,6 +118,6 @@ for x in range(1,4):
 
 	expectedOut = lesson[ln]["Output"][1:]
 	if expectedOut == out:
-		print("Hey, you succeded")
+		print("Hey, you succeeded")
 	else:
 		print("You failed")
