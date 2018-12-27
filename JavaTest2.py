@@ -34,44 +34,55 @@ for x in range(1,4):
 	lesson[str(x)] = cLesson
 
 
-print(lesson["1"]["Text"])
 
-usercode = ""
 
-while True:
-	currentLine = input("Enter Code, type 'exit()' to quit:\n")
-	if currentLine == "exit()":
-		break
-	else:
-		if currentLine[-1:] != ";":
-			print("Invalid, you need a ';' at the end of every line")
+
+for x in range(1,4):
+
+	ln = str(x)
+
+	print("You are doing lesson {}".format(ln))
+
+	print(lesson[ln]["Text"])
+
+	usercode = ""
+
+	while True:
+		currentLine = input("Enter Code, type 'exit()' to quit:\n")
+		if currentLine == "exit()":
+			break
 		else:
-			usercode += currentLine
+			if currentLine[-1:] != ";":
+				print("Invalid, you need a ';' at the end of every line")
+			else:
+				usercode += currentLine
+
+		print("")
+
+	code = lesson[ln]["Code"]
+
+	code = code.replace("// Code Here", usercode)
+
+
+	openFile = open("JavaTest.java","w")
+	openFile.write(code)
+	openFile.close()
 
 	print("")
-
-code = lesson["1"]["Code"]
-
-code = code.replace("// Code Here", usercode)
+	print("Building Java Code")
+	system("javac JavaTest.java")
 
 
-openFile = open("JavaTest.java","w")
-openFile.write(code)
-openFile.close()
+	print("\nExecuting Java program\n~~~~~~~~~~~~~~~\n")
+	out = popen("java JavaTest").read()
+	system("rm JavaTest.class")
 
-print("")
-print("Building Java Code")
-system("javac JavaTest.java")
+	print(out)
 
+	print("\n~~~~~~~~~~~~~~~\n")
 
-print("\nExecuting Java program\n~~~~~~~~~~~~~~~\n")
-out = popen("java JavaTest").read()
-system("rm JavaTest.class")
-
-print(out)
-
-expectedOut = lesson["1"]["Output"]
-if expectedOut == out:
-	print("Hey, you succeded")
-else:
-	print("You failed")
+	expectedOut = lesson[ln]["Output"][1:]
+	if expectedOut == out:
+		print("Hey, you succeded")
+	else:
+		print("You failed")
