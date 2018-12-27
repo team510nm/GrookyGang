@@ -6,15 +6,17 @@
 ###Text###
 Variables are values that can be changed and be used in conditional statements. (if statements etc.)
 
-NOTE: Can write int for integer. float can be lowercase(better than uppercase). String has to be capital
-There are three primitive types of variables:
+NOTE: Can write int for integer. float can be lowercase. String has to be capital
+There are four primitive types of variables:
 - Integers
 - Strings
 - Floats
+- Boolean
 
 Integers store whole numbers both positive and negative.
-Strings store texts (like inputs)
+Strings store texts. (like inputs)
 Floats store numbers with decimal points in them. (3.14)
+Booleans store true or false values.
 
 In Java, rather than floats, we use doubles as they can store more information. A double is not a primitive variable.
 
@@ -60,28 +62,56 @@ System.out.println(hello);
 world
 #####2#####
 ###Text###
-Variables can be used to store info.
-To define a variable, write its type followed by its name then what it equals (after an equal sign).
-For example, to create a string variable called foo, you would write:
+Conditional Statements are pieces of code that only activate when certain criteria are met in the program.
 
-/---------------------\
-| String foo = "Test" |
-\---------------------/
+There are different types of conditional statements. Some of them are:
+-If-else statements
+-While loops
+-Try-catch statements
+-For loops
+-Switch statements (Different syntax so we will not cover them.)
 
+In order to write a conditional statement, you need to first write the type of conditional statement, then in brackets put the condition, then in curly brackets write the code that will be activated when that condition is met.
+NOTE: Booleans can be tested as (var) or (!var)
+* ! means not
+
+/-------------------\
+| type (conditon) { |
+|    //Code         |
+| }                 |
+\-------------------/
+
+In order to have an If-else statement, you put the else after the closing curly brackets of the if statement.
+
+For Example, if you had a boolean called buttonX, you could test it with the following code:
+
+/------------------\
+| if (buttonX) {   |
+|     //True Code  |
+| } else {         |
+|     //False Code |
+| }                |
+\------------------/
 
 ###Requirements###
-Try it below, create an integer variable called 'world', and have it equal 3
+Try it below, create a boolean variable called 'select', and have it be false.
+Create an If-else statement that states that if select is false, add 1 to the predefined integer 'x'.
 ###Code###
 class JavaTest {public static void main(String[] args) {
+
+
+// Pre User
+int x = 666;
+
 // Code Here
-System.out.println(world);
+
+//Post User
+System.out.println(x);
 }}
 
 
-
-
 ###Output###
-3
+667
 #####3#####
 ###Text###
 Variables can be used to store info.
