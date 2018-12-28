@@ -36,7 +36,7 @@ if it is pressed, then set the motor 'left_back' to run at half speed (1 is full
 Remember to add a ; at the end of every line.
 Start coding after this comment ends.
 */
-if (gamepad1.y) {left_back.setPower(0.5);};
+if (gamepad1.y) {left_back.setPower(0.5);}
 
 		
 	}

@@ -51,7 +51,7 @@ for x in range(1,4):
 
 
 
-for x in range(3,4):
+for x in range(1,4):
 
 	ln = str(x)
 
