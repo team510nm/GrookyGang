@@ -7,6 +7,7 @@
 Variables are values that can be changed and be used in conditional statements. (if statements etc.)
 
 NOTE: Can write int for integer. float can be lowercase. String has to be capital
+*Talk about private and public variables (local and global)
 There are four primitive types of variables:
 - Integers
 - Strings
@@ -37,10 +38,10 @@ For example, to edit a double called pie, you would write:
 | pie = 3.15 |
 \------------/
 ###Requirements###
-For your first test, create a double variable called eso and have it equal 86.45.
-For your second test, there will be a string variable called hello and you will have to change its value to world.
+For your first task, create a double variable called eso and have it equal 86.45.
+For your second task, there will be a string variable called hello and you will have to change its value to world.
 ###Code###
-class JavaTest {public static void main(String[] args) {
+class main {public static void main(String[] args) {
 
 
 // Pre User
@@ -65,11 +66,11 @@ world
 Conditional Statements are pieces of code that only activate when certain criteria are met in the program.
 
 There are different types of conditional statements. Some of them are:
--If-else statements
--While loops
--Try-catch statements
--For loops
--Switch statements (Different syntax so we will not cover them.)
+- If-else statements
+- While loops
+- Try-catch statements
+- For loops
+- Switch statements (Different syntax so we will not cover them.)
 
 In order to write a conditional statement, you need to first write the type of conditional statement, then in brackets put the condition, then in curly brackets write the code that will be activated when that condition is met.
 NOTE: Booleans can be tested as (var) or (!var)
@@ -83,7 +84,7 @@ NOTE: Booleans can be tested as (var) or (!var)
 
 In order to have an If-else statement, you put the else after the closing curly brackets of the if statement.
 
-For Example, if you had a boolean called buttonX, you could test it with the following code:
+For Example, if you had a Boolean called buttonX, you could test it with the following code:
 
 /------------------\
 | if (buttonX) {   |
@@ -94,10 +95,10 @@ For Example, if you had a boolean called buttonX, you could test it with the fol
 \------------------/
 
 ###Requirements###
-Try it below, create a boolean variable called 'select', and have it be false.
-Create an If-else statement that states that if select is false, add 1 to the predefined integer 'x'.
+For your first task, create a Boolean variable called 'select', and have it be false.
+For your second task, create an If-else statement that states that if select is false, add 1 to the predefined integer 'x'.
 ###Code###
-class JavaTest {public static void main(String[] args) {
+class main {public static void main(String[] args) {
 
 
 // Pre User
@@ -114,25 +115,62 @@ System.out.println(x);
 667
 #####3#####
 ###Text###
-Variables can be used to store info.
-To define a variable, write its type followed by its name then what it equals (after an equal sign).
-For example, to create a string variable called foo, you would write:
+An Object is like a blueprint. It's a template that variables can be created from. For example in order to build a house, there is a blueprint however the blueprint doesn't get used up in the creation of the house so it can be reused indefinetly. Furthermore, after the creation of the house(variable), you can still modify it. After the house is built you can add furniture to differentiate from other houses.
+
+To create a variable from an object, you must first write the name of the object followed by the name of the variable. After the equal sign, write 'new' followed by the name of the object with '()' attached to it.
+
+For example in the robot code, to create a stopwatch you would do the following:
+
+/------------------------------------------\
+| ElapsedTime runtime = new ElapsedTime(); |
+\------------------------------------------/
+
+Objects have code that runs when you call it. This is called a method. We will discuss methods more in depth in Lesson 2. An example of a method that an object contains is the setPower method that the object 'DcMotor' contains. This method is used to change the power of the motor(s) that the object refers to. We won't discuss all the methods. Check the wiki for more info. <INSTERT LINK>
+
+Some methods that you will use are:
+- setPower (DcMotor)
+- setDirection (DcMotor)
+- setPosition (Servo)
+
+Objects can also contain variables. An example of this is the 'x' variable from the object 'gamepad1' (X button on controller 1), which is a Boolean. You would view this variable through the code 'gamepad1.x;'
+
+For example, to set a servo called 'arm' to the 180° position you would write the following code: (1 is 180° and 0 is 0°)
 
 /---------------------\
-| String foo = "Test" |
+| arm.setPosition(1); |
 \---------------------/
 
 
 ###Requirements###
-Try it below, create an integer variable called 'world', and have it equal 3
+For your task, you are to test if the 'y' button on gamepad 1 is pressed
+if it is pressed, then set the motor 'left_back' to run at half speed (1 is full speed & 0 is off)
 ###Code###
-class JavaTest {public static void main(String[] args) {
-// Code Here
-System.out.println(world);
-}}
+class gamepad {
+	public boolean x = false;
+	public boolean a = false;
+	public boolean b = false;
+	public boolean y = true;
+	public boolean start = false;
+	public boolean select = false;
+};
+
+class Motor {
+	public static void setPower(double power) {
+		System.out.println(power);
+	};
+};
+
+class main {
+	public static void main(String[] args) {
+		gamepad gamepad1 = new gamepad();
+		Motor left_back = new Motor();
+		// Code Here
+		
+	}
+}
 
 
 
 
 ###Output###
-3
+0.5

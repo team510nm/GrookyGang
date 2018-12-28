@@ -3,7 +3,7 @@ class JavaTest {public static void main(String[] args) {
 
 
 // Pre User
-String hello = "I got a 4tb hard drive for $70! Now I can actually play ESO.";
+int x = 666;
 
 /*
 Hello. Welcome to the Code Editor.
@@ -15,25 +15,21 @@ To exit, press [Ctrl+X]
 
 /*
 Your requirements for this assignment are:
-For your first test, create a double variable called eso and have it equal 86.45.
-For your second test, there will be a string variable called hello and you will have to change its value to world.
+Try it below, create a boolean variable called 'select', and have it be false.
+Create an If-else statement that states that if select is false, add 1 to the predefined integer 'x'.
 */
 
 /*
 Remember to add a ; at the end of every line.
 Start coding after this comment ends.
 */
+boolean select = false;
 
-double eso = 86.45;
-hello = "world";
+if (!select) {x+=1;} else {};
 
 
 //Post User
-eso += 20.5;
-System.out.println(eso);
-System.out.println(hello);
+System.out.println(x);
 }}
-
-
 
 

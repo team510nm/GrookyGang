@@ -51,7 +51,7 @@ for x in range(1,4):
 
 
 
-for x in range(1,2):
+for x in range(3,4):
 
 	ln = str(x)
 
@@ -99,18 +99,18 @@ for x in range(1,2):
 	code = code.replace("// Code Here", userCode)
 
 
-	openFile = open("JavaTest.java","w")
+	openFile = open(".running/main.java","w")
 	openFile.write(code)
 	openFile.close()
 
 	print("")
 	print("Building Java Code")
-	system("javac JavaTest.java")
+	system("cd .running && javac main.java")
 
 
 	print("\nExecuting Java program\n~~~~~~~~~~~~~~~\n")
-	out = popen("java JavaTest").read()
-	system("rm JavaTest.class")
+	out = popen("cd .running && java main").read()
+	system("cd .running && rm *.class")
 
 	print(out)
 
