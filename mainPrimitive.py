@@ -25,7 +25,7 @@ Remember to add a ; at the end of every line.
 Start coding after this comment ends.
 */"""
 
-openFile = open("Lesson1.txt")
+openFile = open("Lesson2.txt")
 data = openFile.read().split("#####")
 openFile.close()
 while '' in data:
@@ -88,7 +88,7 @@ for x in range(1,4):
 	tempFile.write(beforeCode)
 	tempFile.close()
 
-	system("nano TempEditor.java")
+	system("nano TempEditor.java -\$wS -m -l")
 	tempFile = open("TempEditor.java")
 	userCode = tempFile.read()
 	tempFile.close()

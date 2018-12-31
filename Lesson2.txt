@@ -1,104 +1,113 @@
 #####Lesson Plan##########
-1) Uploading
-2) Methods
-3) File Structures
+1) Robot Side Programming
+2) File Structures
+3) Methods
 #####1#####
 ###Text###
+In this sub-lesson we will be talking about configuring outputs for the robot, uploading to the robot, and the robots built-in IDE.
 
+In order to configure the robot, open the "Robot Controller" app and open the menu with the three dots at the top right of the app. In the menu select the option that states "Configure Robot" and then click on "new" at the top left corner. Go through every connected device (all that are connected will show up) and apply appropriate labels to each sub-output. Also specify the type of device (type of motor etc.). After you are done, press the "Save" button at the top left.
+
+There are 2 ways to upload code to the robot. The first and prefered method if you are coding in android studios is to simply build the app and deploy it to the phone. You can do this by going to [Build > Generate Signed APK] then following the instructions. After this is complete, you would then copy the file over to your phone, then in any file explorer, click it.
+
+The other method is through the built-in IDE. The FTC robot controller provides their own web based IDE. To access this IDE, go to the robot controller, enter the overflow menu, then press "Program & Manage". A wifi network will be shown to you, join the network and navigate to the link specified on the page. When on the web page, press the On Bot Java button to access the IDE. [Insert how to create file]. To upload the code for usage, press the hammer button in the bottom right corner of the screen.
 ###Requirements###
-
+There are no requirements. Just press Ctrl+X to continue.
 ###Code###
-class gamepad {
-	public boolean x = false;
-	public boolean a = false;
-	public boolean b = false;
-	public boolean y = true;
-	public boolean start = false;
-	public boolean select = false;
-};
-
-class Motor {
-	public static void setPower(double power) {
-		System.out.println(power);
-	};
-};
-
 class main {
 	public static void main(String[] args) {
-		gamepad gamepad1 = new gamepad();
-		Motor left_back = new Motor();
+		System.out.println("AHHHH")
 		// Code Here
-		
+
 	}
 }
 
 
-
-
 ###Output###
-
+AHHHH
 #####2#####
 ###Text###
+-- Imports --
+Imports are external libraries of code that can be imported into the code to do specific tasks that aren't normally able to be done in Java.
 
+For example, to import ElapsedTime, you would do the following:
+/-------------------------------------------------\
+| import com.qualcomm.robotcore.util.ElapsedTime; |
+\-------------------------------------------------/
+
+A list of useful imports for Robotics can be found at: {LINK, WAKE UP LINK, YOU ARE THE LIGHT, OUR LIGHT. LINK. WAKE UP. HEY LISTEN.}
+
+-- Main Function --
+In Java, in order for your code to activate, it must be in a method. The most common method is the main method. Without a main method, your code will do nothing. In vanilla Java, a main method looks like the following:
+/------------------------------------------\
+| public static void main(String[] args) { |
+|     // Code Here                         |
+| };                                       |
+\------------------------------------------/
+-- Robot Main Function --
+In FTC Robotics, also known as modded Java (its tea), we use a different main method. This method acts similar to the previous one, except it only runs when the Robot Controller app presses play. The syntax for this method is similar to the previous one. To make a main method in FTC, consider the following:
+
+/---------------------------\
+| public void runOpMode() { |
+|     // Code Here          |
+| };                        |
+\---------------------------/
+
+--- NOTE -> WHY ARE THERE NO STATICS!? ---
 ###Requirements###
-
+For your first task, make a main java method.
+Inside this method, run the method "timesTwo" with the parameter '5'.
 ###Code###
-class gamepad {
-	public boolean x = false;
-	public boolean a = false;
-	public boolean b = false;
-	public boolean y = true;
-	public boolean start = false;
-	public boolean select = false;
-};
-
-class Motor {
-	public static void setPower(double power) {
-		System.out.println(power);
-	};
-};
 
 class main {
-	public static void main(String[] args) {
-		gamepad gamepad1 = new gamepad();
-		Motor left_back = new Motor();
-		// Code Here
-		
+	public int timesTwo(Integer in) {
+		int out = in * 2
+		return out;
 	}
+	// Code Here
 }
 
 
 
 
 ###Output###
-
+10
 #####3#####
 ###Text###
+Methods are segments of code that can be reused over and over again. They are mostly used when you have to do the same procedure more than once in order to save time so that you don't have to write the code over and over again. Methods are really helpful when dealing with encoders, a tool that will tell you how far your wheels have moved. Encoders are useful in the autonomous period, and as such we will talk more about them in Lesson 3.
+
+In order to create a method, you will first write either "public" or "private" (similar to variables), then after that write "static" (we do it to conserve memory [RAM]), and after that you write "void" if you are not returning anything and if you are then you put the type of variable you are returning (ex. String). After you have written those down, then you put the name of the method, then open bracket, put the type of variable, then the variable name, and then close bracket. Then open curly brackets, input the code you want the method to run, and finally close the curly brackets followed by a ";".
+
+For example, in order to make a method in order to print text with the command 'println("")', you would do the following
+
+/-----------------------------------------------\
+| private static void println(String message) { |
+|     System.out.println(message);              |
+| };                                            |
+\-----------------------------------------------/
+
+You can then call the method by using this code:
+
+/----------------------------\
+| println("INPUT TEXT HERE") |
+\----------------------------/
 
 ###Requirements###
-
+For your first task, create a method that squares a number then returns the squared number.
+For your second task, create a main method (called 'runOpMode') that runs the method from the first task, inputting the number 5.
+For you third task, create a DcMotor object in the main method and set its power to the output of the previous task.
 ###Code###
-class gamepad {
-	public boolean x = false;
-	public boolean a = false;
-	public boolean b = false;
-	public boolean y = true;
-	public boolean start = false;
-	public boolean select = false;
-};
-
-class Motor {
+class DcMotor {
 	public static void setPower(double power) {
 		System.out.println(power);
 	};
 };
 
 class main {
+	// Code Here
+
 	public static void main(String[] args) {
-		gamepad gamepad1 = new gamepad();
-		Motor left_back = new Motor();
-		// Code Here
-		
+	    runOpMode();
 	}
 }
 
@@ -106,4 +115,6 @@ class main {
 
 
 ###Output###
+25
+
 

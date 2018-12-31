@@ -1,24 +1,12 @@
 
-class gamepad {
-	public boolean x = false;
-	public boolean a = false;
-	public boolean b = false;
-	public boolean y = true;
-	public boolean start = false;
-	public boolean select = false;
-};
-
-class Motor {
+class DcMotor {
 	public static void setPower(double power) {
 		System.out.println(power);
 	};
 };
 
 class main {
-	public static void main(String[] args) {
-		gamepad gamepad1 = new gamepad();
-		Motor left_back = new Motor();
-		/*
+	/*
 Hello. Welcome to the Code Editor.
 This is where you will write your java code.
 
@@ -28,20 +16,15 @@ To exit, press [Ctrl+X]
 
 /*
 Your requirements for this assignment are:
-For your task, you are to test if the 'y' button on gamepad 1 is pressed
-if it is pressed, then set the motor 'left_back' to run at half speed (1 is full speed & 0 is off)
+For your first task, create a method that squares a number then returns the squared number.
+For your second task, create a main method (called 'runOpMode') that runs the method from the first task, inputting the number 5.
+For you third task, create a DcMotor object in the main method and set its power to the output of the previous task.
 */
 
 /*
 Remember to add a ; at the end of every line.
 Start coding after this comment ends.
 */
-if (gamepad1.y) {
-	left_back.setpower(0.5);
-}
-
-		
-	}
 }
 
 
