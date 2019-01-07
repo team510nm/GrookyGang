@@ -7,7 +7,7 @@
 
 from os import popen, system
 '''
-out = pOpen("echo \"Test\"").read()
+out = popen("echo \"Test\"").read()
 
 print(out)
 '''
