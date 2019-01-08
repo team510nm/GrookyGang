@@ -16,10 +16,10 @@ There are no requirements. Just press Ctrl+X to continue.
 ###Code###
 class main {
 	public static void main(String[] args) {
-		System.out.println("AHHHH")
+		System.out.println("AHHHH");
 		// Code Here
 
-	}
+	};
 }
 
 
@@ -61,9 +61,9 @@ Inside this method, run the method "timesTwo" with the parameter '5'.
 
 class main {
 	public int timesTwo(Integer in) {
-		int out = in * 2
+		int out = in * 2;
 		return out;
-	}
+	};
 	// Code Here
 }
 
@@ -115,6 +115,6 @@ class main {
 
 
 ###Output###
-25
+25.0
 
 
