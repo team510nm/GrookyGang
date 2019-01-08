@@ -6,7 +6,6 @@
 ###Text###
 Variables are values that can be changed and be used in conditional statements. (if statements etc.)
 
-NOTE: Can write int for integer. float can be lowercase. String has to be capital
 *Talk about private and public variables (local and global)
 There are four primitive types of variables:
 - Integers
@@ -29,6 +28,7 @@ For example, to create a string variable called foo, you would write:
 /---------------------\
 | String foo = "Test" |
 \---------------------/
+NOTE: Can write int for integer. float can be lowercase. String has to be capital
 
 After the creation of the variable, you are able to modify and manipulate its value without having to specify the type of variable. In order to manipulate the variable, first put the name of the variable then write the new value after an equal sign.
 

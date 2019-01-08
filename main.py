@@ -11,7 +11,7 @@ from sys import popen
 # Template to use in the reference file
 ##req##requirementsDone = True ## Uncomments after requirements file finishes completly
 
-if requirementsDone:
+if !requirementsDone:
 	from requirements import reqComplete # run requirements file
 
 if requirementsDone or reqComplete:
