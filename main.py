@@ -6,12 +6,12 @@
 '''
 from reference import *
 from parse import *
-from sys import popen
+from os import popen
 
 # Template to use in the reference file
 ##req##requirementsDone = True ## Uncomments after requirements file finishes completly
 
-if !requirementsDone:
+if requirementsDone == False:
 	from requirements import reqComplete # run requirements file
 
 if requirementsDone or reqComplete:
