@@ -6,7 +6,6 @@
 ###Text###
 Variables are values that can be changed and be used in conditional statements. (if statements etc.)
 
-*Talk about private and public variables (local and global)
 There are four primitive types of variables:
 - Integers
 - Strings
@@ -19,6 +18,9 @@ Floats store numbers with decimal points in them. (3.14)
 Booleans store true or false values.
 
 In Java, rather than floats, we use doubles as they can store more information. A double is not a primitive variable.
+
+There are two types of variables in Java. There are public variables which can be used anywhere in the program, and there are private variables that can only be used in the instance that they were created in.
+NOTE: By default, A variable can be used by classes in the same folder.
 
 In order to create variables in Java, first write the type of variable it is (integers, strings or floats) followed by the name of the variable. Then write what it's value after putting an equal sign.
 Only Primitive variable types have to be capitalized.
@@ -74,7 +76,7 @@ There are different types of conditional statements. Some of them are:
 
 In order to write a conditional statement, you need to first write the type of conditional statement, then in brackets put the condition, then in curly brackets write the code that will be activated when that condition is met.
 NOTE: Booleans can be tested as (var) or (!var)
-* ! means not
+NOTE: ! means not
 
 /-------------------\
 | type (conditon) { |

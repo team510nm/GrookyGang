@@ -53,7 +53,6 @@ In FTC Robotics, also known as modded Java (its tea), we use a different main me
 | };                        |
 \---------------------------/
 
---- NOTE -> WHY ARE THERE NO STATICS!? ---
 ###Requirements###
 For your first task, make a main java method.
 Inside this method, run the method "timesTwo" with the parameter '5'.
