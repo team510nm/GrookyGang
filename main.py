@@ -6,19 +6,23 @@
 '''
 from reference import *
 from parse import *
-from os import popen
+from menu import *
+from os import popen,system
 
 # Template to use in the reference file
 ##req##requirementsDone = True ## Uncomments after requirements file finishes completly
 
-if requirementsDone == False:
+if not requirementsDone:
 	from requirements import reqComplete # run requirements file
 
 if requirementsDone or reqComplete:
 	print("Actual Code here")
 
-
+	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 	### MENU HERE (Or something) ###
+	mainMenu(validLessons)
+	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+
 	choice = "Lesson1"
 
 
@@ -27,6 +31,7 @@ if requirementsDone or reqComplete:
 	### SUB LESSON MENU HERE ###
 	ln = "1" # lesson number
 
+	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 	print("You are doing lesson {}".format(ln))
 
 	print(lesson[ln]["Text"])
@@ -36,38 +41,59 @@ if requirementsDone or reqComplete:
 
 	### // TESTING PORTION // ###
 
-	assignment = lesson[ln]["Requirements"]
+	while True:
 
-	beforeCode = preCode
-	beforeCode += "\n\n/*\nYour requirements for this assignment are:{}*/\n\n".format(assignment)
-	beforeCode += reminder
+		assignment = lesson[ln]["Requirements"]
 
-	tempFile = open("TempEditor.java","w")
-	tempFile.write(beforeCode)
-	tempFile.close()
+		beforeCode = preCode
+		beforeCode += "\n\n/*\nYour requirements for this assignment are:{}*/\n\n".format(assignment)
+		beforeCode += reminder
 
-
-	# User Input Here
-	system("nano TempEditor.java -\$wS -m -l")
-	tempFile = open("TempEditor.java")
-	userCode = tempFile.read()
-	tempFile.close()
-	system("rm TempEditor.java")
-
-	code = lesson[ln]["Code"]
-
-	code = code.replace("// Code Here", userCode)
+		tempFile = open("TempEditor.java","w")
+		tempFile.write(beforeCode)
+		tempFile.close()
 
 
-	openFile = open(".running/main.java","w")
-	openFile.write(code)
-	openFile.close()
+		# User Input Here
+		system("nano TempEditor.java -\$wS -m -l")
+		tempFile = open("TempEditor.java")
+		userCode = tempFile.read()
+		tempFile.close()
+		system("rm TempEditor.java")
 
-	print("")
-	building = popen("cd .running && javac main.java")
+		code = lesson[ln]["Code"]
 
-	if popen == "":
-		print("An error arose during the compiling of your program:")
-		print(building)
-	else:
-		pass
+		code = code.replace("// Code Here", userCode)
+
+
+		openFile = open(".running/main.java","w")
+		openFile.write(code)
+		openFile.close()
+
+		print("")
+		building = popen("cd .running && javac main.java && echo 'complete'").read()
+
+		#print(building)
+
+		if not building == "complete\n":
+			print("An error arose during the compiling of your program (Visible above)")
+			#print(building)
+			validYes = ["y", ""]
+			redo = input("Would you like to redo this test? (Y/n)").lower()
+			if not (redo in validYes):
+				break
+		else:
+			out = popen("cd .running && java main").read()
+			expectedOut = lesson[ln]["Output"][1:]
+			if expectedOut == out:
+				print("You passed the test.")
+				break
+			else:
+				print("You failed the test, the following was the output of your code:")
+				print(out)
+				print("\n\n")
+				validYes = ["y",""]
+				redo = input("Would you like to redo this test? (Y/n)").lower()
+				if not (redo in validYes):
+					break
+		print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")

@@ -67,7 +67,7 @@ if requirementsDone != True:
 
 			referenceFile = open("reference.py","r")
 			reference = referenceFile.read()
-			reference = reference.replace("##req##","")
+			reference = reference.replace("requirementsDone = False","requirementsDone = True")
 			referenceFile.close()
 
 			referenceFile = open("reference.py","w")

@@ -1,12 +1,11 @@
 
-class DcMotor {
-	public static void setPower(double power) {
-		System.out.println(power);
-	};
-};
+class main {public static void main(String[] args) {
 
-class main {
-	/*
+
+// Pre User
+String hello = "I got a 4tb hard drive for $70! Now I can actually play ESO.";
+
+/*
 Hello. Welcome to the Code Editor.
 This is where you will write your java code.
 
@@ -16,29 +15,24 @@ To exit, press [Ctrl+X]
 
 /*
 Your requirements for this assignment are:
-For your first task, create a method that squares a number then returns the squared number.
-For your second task, create a FTC main method (called 'runOpMode') that runs the method from the first task, inputting the number 5.
-For you third task, create a DcMotor object in the main method and set its power to the output of the previous task.
+For your first task, create a double variable called eso and have it equal 86.45.
+For your second task, there will be a string variable called hello and you will have to change its value to world.
 */
 
 /*
 Remember to add a ; at the end of every line.
 Start coding after this comment ends.
 */
-public static int s(int args) {
-return args*args;
-}
 
-public static void runOpMode() {
-DcMotor m = new DcMotor();
-m.setPower(s(5));
-}
+double eso = 86.45;
+hello = "world";
 
 
-	public static void main(String[] args) {
-	    runOpMode();
-	}
-}
+//Post User
+eso += 20.5;
+System.out.println(eso);
+System.out.println(hello);
+}}
 
 
 
