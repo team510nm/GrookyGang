@@ -22,7 +22,7 @@ In Java, rather than floats, we use doubles as they can store more information. 
 There are two types of variables in Java. There are public variables which can be used anywhere in the program, and there are private variables that can only be used in the instance that they were created in.
 NOTE: By default, A variable can be used by classes in the same folder.
 
-In order to create variables in Java, first write the type of variable it is (integers, strings or floats) followed by the name of the variable. Then write what it's value after putting an equal sign.
+In order to create variables in Java, first write the type of variable it is (integers, strings or doubles) followed by the name of the variable. Then write what it's value is after putting an equal sign.
 Only Primitive variable types have to be capitalized.
 
 For example, to create a string variable called foo, you would write:
@@ -41,7 +41,7 @@ For example, to edit a double called pie, you would write:
 \------------/
 ###Requirements###
 For your first task, create a double variable called eso and have it equal 86.45.
-For your second task, there will be a string variable called hello and you will have to change its value to world.
+For your second task, there will be a pre-created string variable called hello and you will have to change its value to world.
 ###Code###
 class main {public static void main(String[] args) {
 
@@ -117,7 +117,7 @@ System.out.println(x);
 667
 #####3#####
 ###Text###
-An Object is like a blueprint. It's a template that variables can be created from. For example in order to build a house, there is a blueprint however the blueprint doesn't get used up in the creation of the house so it can be reused indefinetly. Furthermore, after the creation of the house(variable), you can still modify it. After the house is built you can add furniture to differentiate from other houses.
+An Object is like a blueprint. It's a template that variables can be created from. For example, in order to build a house, there is a blueprint however the blueprint doesn't get used up in the creation of the house so it can be reused indefinetly. Furthermore, after the creation of the house(variable), you can still modify it. After the house is built you can add furniture to differentiate it from other houses.
 
 To create a variable from an object, you must first write the name of the object followed by the name of the variable. After the equal sign, write 'new' followed by the name of the object with '()' attached to it.
 
@@ -136,7 +136,8 @@ Some methods that you will use are:
 
 Objects can also contain variables. An example of this is the 'x' variable from the object 'gamepad1' (X button on controller 1), which is a Boolean. You would view this variable through the code 'gamepad1.x;'
 
-For example, to set a servo called 'arm' to the 180° position you would write the following code: (1 is 180° and 0 is 0°)
+For example, to set a servo called 'arm' to the 180° position you would write the following code:
+NOTE: For servo position, 1 is 180° and 0 is 0°.
 
 /---------------------\
 | arm.setPosition(1); |

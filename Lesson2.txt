@@ -6,11 +6,11 @@
 ###Text###
 In this sub-lesson we will be talking about configuring outputs for the robot, uploading to the robot, and the robots built-in IDE.
 
-In order to configure the robot, open the "Robot Controller" app and open the menu with the three dots at the top right of the app. In the menu select the option that states "Configure Robot" and then click on "new" at the top left corner. Go through every connected device (all that are connected will show up) and apply appropriate labels to each sub-output. Also specify the type of device (type of motor etc.). After you are done, press the "Save" button at the top left.
+In order to configure the robot, open the 'Robot Controller' app and open the menu with the three dots at the top right of the app. In the menu select the option that states 'Configure Robot' and then click on 'new' at the top left corner. Go through every connected device (all that are connected will show up) and apply appropriate labels to each sub-output. Also specify the type of device (type of motor etc.). After you are done, press the 'Save' button at the top left.
 
 There are 2 ways to upload code to the robot. The first and preferred method if you are coding in android studios is to simply build the app and deploy it to the phone. You can do this by going to [Build > Generate Signed APK] then following the instructions. After this is complete, you would then copy the file over to your phone, then in any file explorer, click it.
 
-The other method is through the built-in IDE. The FTC robot controller provides their own web based IDE. To access this IDE, go to the robot controller, enter the overflow menu, then press "Program & Manage". A wifi network will be shown to you, join the network and navigate to the link specified on the page. When on the web page, press the On Bot Java button to access the IDE. [Insert how to create file]. To upload the code for usage, press the hammer button in the bottom right corner of the screen.
+The other method is through the built-in IDE. The FTC robot controller provides their own web based IDE. To access this IDE, go to the robot controller, enter the overflow menu, then press 'Program & Manage'. A wifi network will be shown to you, join the network and navigate to the link specified on the page. When on the web page, press the On Bot Java button to access the IDE. [Insert how to create file]. To upload the code for usage, press the hammer button in the bottom right corner of the screen.
 ###Requirements###
 There are no requirements. Just press Ctrl+X to continue.
 ###Code###
@@ -45,7 +45,7 @@ In Java, in order for your code to activate, it must be in a method. The most co
 | };                                       |
 \------------------------------------------/
 -- Robot Main Function --
-In FTC Robotics, also known as modded Java (its tea), we use a different main method. This method acts similar to the previous one, except it only runs when the Robot Controller app presses play. The syntax for this method is similar to the previous one. To make a main method in FTC, consider the following:
+In FTC Robotics, also known as modded Java, we use a different main method. This method acts similar to the previous one, except it only runs when the Robot Controller app presses play. The syntax for this method is similar to the previous one. To make a main method in FTC, consider the following:
 
 /---------------------------\
 | public void runOpMode() { |
@@ -94,7 +94,7 @@ You can then call the method by using this code:
 ###Requirements###
 For your first task, create a method that squares a number then returns the squared number.
 For your second task, create a FTC main method (called 'runOpMode') that runs the method from the first task, inputting the number 5.
-For you third task, create a DcMotor object in the main method and set its power to the output of the previous task.
+For you third task, create a DcMotor object in the main method and set its power to the output of the second task.
 ###Code###
 class DcMotor {
 	public static void setPower(double power) {

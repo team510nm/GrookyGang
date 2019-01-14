@@ -4,7 +4,7 @@
 3) Encoders
 #####1#####
 ###Text###
-
+Telemetry is
 ###Requirements###
 
 ###Code###
@@ -39,6 +39,21 @@ class main {
 
 #####2#####
 ###Text###
+Sensors are pieces of equipment that can be used to sense things. They are able to sense different things based on the type of sensor and are mainly used in the autonomous portion of the competition.
+
+Some examples of sensors would be:
+- Sound Sensors
+- Tactile Sensors
+- Proximity Sensors
+- Thermal Sensors
+
+In order to use sensors in the program, (Input how to sensor)
+
+For example, (Input example)
+
+/----------------\
+| (Example here) |
+\----------------/
 
 ###Requirements###
 
@@ -74,7 +89,7 @@ class main {
 
 #####3#####
 ###Text###
-
+Encoders are 
 ###Requirements###
 
 ###Code###
