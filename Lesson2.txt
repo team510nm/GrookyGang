@@ -59,9 +59,9 @@ Inside this method, run the method "timesTwo" with the parameter '5'.
 ###Code###
 
 class main {
-	public int timesTwo(Integer in) {
+	public static void timesTwo(Integer in) {
 		int out = in * 2;
-		return out;
+		System.out.println(out);
 	};
 	// Code Here
 }

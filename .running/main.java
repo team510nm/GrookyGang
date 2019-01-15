@@ -1,11 +1,11 @@
 
-class main {public static void main(String[] args) {
 
-
-// Pre User
-String hello = "I got a 4tb hard drive for $70! Now I can actually play ESO.";
-
-/*
+class main {
+	public static void timesTwo(Integer in) {
+		int out = in * 2;
+		System.out.println(out);
+	};
+	/*
 Hello. Welcome to the Code Editor.
 This is where you will write your java code.
 
@@ -15,24 +15,19 @@ To exit, press [Ctrl+X]
 
 /*
 Your requirements for this assignment are:
-For your first task, create a double variable called eso and have it equal 86.45.
-For your second task, there will be a string variable called hello and you will have to change its value to world.
+For your first task, make a main java method.
+Inside this method, run the method "timesTwo" with the parameter '5'.
 */
 
 /*
 Remember to add a ; at the end of every line.
 Start coding after this comment ends.
 */
+public static void main(String[] args) {
+timesTwo(5);
+};
 
-double eso = 86.45;
-hello = "world";
-
-
-//Post User
-eso += 20.5;
-System.out.println(eso);
-System.out.println(hello);
-}}
+}
 
 
 

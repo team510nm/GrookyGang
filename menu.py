@@ -34,4 +34,20 @@ def mainMenu(validLessons):
 
 	print(menu)
 
-	input("Enter")
+	userin = input("Enter your choice")
+	for index in roman:
+		if roman[index] == userin:
+			lessonNumber = "Lesson"+str(index)
+			return lessonNumber
+	#return userin
+
+def submenu(lesson):
+	subLessons = lesson["Lesson Plan"]
+	print(" ~~~~~~~~~~~~~~~~~~~~ Sub-Lessons Menu ~~~~~~~~~~~~~~~~~~~~ ")
+	print("Enter the number of the sub-lesson you would like to complete")
+	print("")
+	print("0) Exit")
+	print(subLessons)
+	print("")
+	lessonNumber = input("Sub-Lesson Number : ")
+	return lessonNumber
