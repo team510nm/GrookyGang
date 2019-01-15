@@ -2,6 +2,7 @@
 1) Telemetry
 2) Sensors
 3) Encoders
+4) VU Marks
 #####1#####
 ###Text###
 Telemetry is
@@ -90,6 +91,41 @@ class main {
 #####3#####
 ###Text###
 Encoders are 
+###Requirements###
+
+###Code###
+class gamepad {
+	public boolean x = false;
+	public boolean a = false;
+	public boolean b = false;
+	public boolean y = true;
+	public boolean start = false;
+	public boolean select = false;
+};
+
+class Motor {
+	public static void setPower(double power) {
+		System.out.println(power);
+	};
+};
+
+class main {
+	public static void main(String[] args) {
+		gamepad gamepad1 = new gamepad();
+		Motor left_back = new Motor();
+		// Code Here
+		
+	}
+}
+
+
+
+
+###Output###
+
+#####4#####
+###Text###
+VU Marks are
 ###Requirements###
 
 ###Code###

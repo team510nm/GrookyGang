@@ -115,5 +115,3 @@ class main {
 
 ###Output###
 25.0
-
-

@@ -1,6 +1,6 @@
 'Refererence File'
 
-requirementsDone = False ## Changes to True after requirements file finishes completely
+requirementsDone = True ## Changes to True after requirements file finishes completely
 testFile = ".running/JavaTest.java"
 
 preCode = '''/*
