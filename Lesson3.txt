@@ -18,7 +18,7 @@ class gamepad {
 	public boolean select = false;
 };
 
-class Motor {
+class Motor {(leftInches
 	public static void setPower(double power) {
 		System.out.println(power);
 	};
@@ -58,7 +58,7 @@ For example, (Input example)
 
 ###Requirements###
 
-###Code###
+###Code###(leftInches
 class gamepad {
 	public boolean x = false;
 	public boolean a = false;
@@ -90,42 +90,8 @@ class main {
 
 #####3#####
 ###Text###
-Encoders are 
-###Requirements###
 
-###Code###
-class gamepad {
-	public boolean x = false;
-	public boolean a = false;
-	public boolean b = false;
-	public boolean y = true;
-	public boolean start = false;
-	public boolean select = false;
-};
-
-class Motor {
-	public static void setPower(double power) {
-		System.out.println(power);
-	};
-};
-
-class main {
-	public static void main(String[] args) {
-		gamepad gamepad1 = new gamepad();
-		Motor left_back = new Motor();
-		// Code Here
-		
-	}
-}
-
-
-
-
-###Output###
-
-#####4#####
-###Text###
-VU Marks are
+Motors measure how many revolutions they did in the form of encoder counts. Each motor has different amount of encoder counts per revolution. We can use these counts to tell a motor to turn a certain amount of times in order to go a set distance.(leftInches
 ###Requirements###
 
 ###Code###
