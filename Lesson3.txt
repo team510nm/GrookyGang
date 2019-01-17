@@ -91,7 +91,21 @@ class main {
 #####3#####
 ###Text###
 
-Motors measure how many revolutions they did in the form of encoder counts. Each motor has different amount of encoder counts per revolution. We can use these counts to tell a motor to turn a certain amount of times in order to go a set distance.(leftInches
+Motors measure how many revolutions they did in the form of encoder counts. Each motor has different amount of encoder counts per revolution. Encoders can use these counts to tell a motor to turn a certain amount of times in order to go a set distance.
+NOTE: You have to set the mode for each motor individually.
+
+There are 3 types of RunModes that we will be using inside this lesson. They are:
+- RUN_USING_ENCODER
+- RUN_TO_POSITION
+- STOP_AND_RESET_ENCODER
+
+For example, in orrder to set the motor to start using a motor you do the following: (like initiating a variable)
+
+/--------------------------------------------------\
+| motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER) |
+\--------------------------------------------------/
+
+
 ###Requirements###
 
 ###Code###
