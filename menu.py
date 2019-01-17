@@ -1,11 +1,15 @@
 """
 @Title of program: menu.py
-@Author: Chinmay Patil
+@Author: Raeed Asif
 @Date of creation: 2019-01-12 - 20:44
 """
 
+from sys import exit
+
 def mainMenu(validLessons):
 	menu = """
+ ~~~~~~~~~~~~~~~~~~~~~~~~~ Main Menu ~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Enter the number/roman numeral of the option you wish to choose
 1) Get New Lessons
 2) Exit
 {Lessons}
@@ -34,11 +38,23 @@ def mainMenu(validLessons):
 
 	print(menu)
 
-	userin = input("Enter your choice")
-	for index in roman:
-		if roman[index] == userin:
-			lessonNumber = "Lesson"+str(index)
-			return lessonNumber
+	while True:
+		userin = input("Enter your choice: ").upper()
+		for index in roman:
+			if roman[index] == userin:
+				lessonNumber = "Lesson"+str(index)
+				if lessonNumber in validLessons:
+					return lessonNumber
+				else:
+					print("That is not a lesson.")
+		if userin == "1":
+			print("In order to get more lessons [Ctrl] click the following link:\n{LINK}")
+		elif userin == "2":
+			exit()
+		else:
+			print("Invalid Input.")
+		print("")
+
 	#return userin
 
 def submenu(lesson):
@@ -49,5 +65,13 @@ def submenu(lesson):
 	print("0) Exit")
 	print(subLessons)
 	print("")
-	lessonNumber = input("Sub-Lesson Number : ")
-	return lessonNumber
+	while True:
+		lessonNumber = input("Sub-Lesson Number : ")
+		if lessonNumber == "0":
+			return lessonNumber
+		try:
+			lesson[lessonNumber]
+			return lessonNumber
+		except:
+			print("Invalid Input.")
+		print("")
