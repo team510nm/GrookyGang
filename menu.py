@@ -8,6 +8,11 @@ from sys import exit
 
 def mainMenu(validLessons):
 	menu = """
+
+Welcome to the Robotics Java Tutorial
+Made by Chinmay Patil and Raeed Asif
+
+
  ~~~~~~~~~~~~~~~~~~~~~~~~~ Main Menu ~~~~~~~~~~~~~~~~~~~~~~~~~ 
 Enter the number/roman numeral of the option you wish to choose
 1) Get New Lessons
