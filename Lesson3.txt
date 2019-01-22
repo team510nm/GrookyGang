@@ -1,0 +1,140 @@
+#####Lesson Plan##########
+1) Telemetry
+2) Sensors
+3) Encoders
+4) VU Marks
+#####1#####
+###Text###
+Telemetry is
+###Requirements###
+
+###Code###
+class gamepad {
+	public boolean x = false;
+	public boolean a = false;
+	public boolean b = false;
+	public boolean y = true;
+	public boolean start = false;
+	public boolean select = false;
+};
+
+class Motor {(leftInches
+	public static void setPower(double power) {
+		System.out.println(power);
+	};
+};
+
+class main {
+	public static void main(String[] args) {
+		gamepad gamepad1 = new gamepad();
+		Motor left_back = new Motor();
+		// Code Here
+		
+	}
+}
+
+
+
+
+###Output###
+
+#####2#####
+###Text###
+Sensors are pieces of equipment that can be used to sense things. They are able to sense different things based on the type of sensor and are mainly used in the autonomous portion of the competition.
+
+Some examples of sensors would be:
+- Sound Sensors
+- Tactile Sensors
+- Proximity Sensors
+- Thermal Sensors
+
+In order to use sensors in the program, (Input how to sensor)
+
+For example, (Input example)
+
+/----------------\
+| (Example here) |
+\----------------/
+
+###Requirements###
+
+###Code###(leftInches
+class gamepad {
+	public boolean x = false;
+	public boolean a = false;
+	public boolean b = false;
+	public boolean y = true;
+	public boolean start = false;
+	public boolean select = false;
+};
+
+class Motor {
+	public static void setPower(double power) {
+		System.out.println(power);
+	};
+};
+
+class main {
+	public static void main(String[] args) {
+		gamepad gamepad1 = new gamepad();
+		Motor left_back = new Motor();
+		// Code Here
+		
+	}
+}
+
+
+
+
+###Output###
+
+#####3#####
+###Text###
+
+Motors measure how many revolutions they did in the form of encoder counts. Each motor has different amount of encoder counts per revolution. Encoders can use these counts to tell a motor to turn a certain amount of times in order to go a set distance.
+NOTE: You have to set the mode for each motor individually.
+
+There are 3 types of RunModes that we will be using inside this lesson. They are:
+- RUN_USING_ENCODER
+- RUN_TO_POSITION
+- STOP_AND_RESET_ENCODER
+
+For example, in orrder to set the motor to start using a motor you do the following: (like initiating a variable)
+
+/--------------------------------------------------\
+| motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER) |
+\--------------------------------------------------/
+
+
+###Requirements###
+
+###Code###
+class gamepad {
+	public boolean x = false;
+	public boolean a = false;
+	public boolean b = false;
+	public boolean y = true;
+	public boolean start = false;
+	public boolean select = false;
+};
+
+class Motor {
+	public static void setPower(double power) {
+		System.out.println(power);
+	};
+};
+
+class main {
+	public static void main(String[] args) {
+		gamepad gamepad1 = new gamepad();
+		Motor left_back = new Motor();
+		// Code Here
+		
+	}
+}
+
+
+
+
+###Output###
+
