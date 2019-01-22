@@ -8,7 +8,7 @@
 
 def parseLesson(lessonname):
 
-	openFile = open(lessonname+".txt")
+	openFile = open("lessons/"+lessonname+".txt")
 
 	data = openFile.read().split("#####") # Split along 5 hashes (Sections)
 	openFile.close()
