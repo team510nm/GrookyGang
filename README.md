@@ -12,6 +12,8 @@ By default the lessons included are:
 ## How to get more lessons
 Sorry, this feature is not implemented as of yet.
 
+## How to make new lessons
+Refer to the `DEVELOPING.md` file
 # Requirements
 1. Must be running program in a bash terminal
 2. Must have the Java JDK installed
