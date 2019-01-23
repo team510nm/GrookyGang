@@ -2,7 +2,7 @@
 ## How to create a lesson
 All lessons must start off with a lesson plan. This plan provides the sub lesson menu.
 An example of this is below:
-```
+```md
 ##### Lesson Plan #####
 Whatever you want goes in here
 This is what the user sees
