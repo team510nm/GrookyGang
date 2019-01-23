@@ -18,7 +18,7 @@ After this lesson plan, you need to add the actual lessons. The layout of a less
 ###Code###
 {Enter full java template code here (including classes). Use '//Code here' to specify where user code will be placed}
 ###Output###
-{Enter the expected output of your code here. It is important that you press enter at the end of this section}
+{Enter the expected output of your code here.}
 ```
 
 An example of this is:
@@ -40,7 +40,7 @@ class main {
 ###Output###
 1
 ```
-
+It is also very important that you rememeber to leave an empty line at the end of your file (Otherwise your last output section will not function correctly)
 ## How to add your lesson to the menu
 To add your lesson to the menu, name it Lesson{Number}.txt, then put it in the lesson folder.
 Then navigate to the reference file, and at the very bottom, add your lesson's file name to the list.
