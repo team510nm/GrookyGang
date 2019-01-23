@@ -7,6 +7,7 @@
 
 
 def parseLesson(lessonname):
+	'Change lesson text file into a dictionary'
 
 	openFile = open("lessons/"+lessonname+".txt")
 
