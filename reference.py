@@ -1,4 +1,5 @@
 'Refererence File'
+## All global variables are stored in here
 
 requirementsDone = True ## Changes to True after requirements file finishes completely
 testFile = ".running/JavaTest.java"
