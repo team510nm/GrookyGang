@@ -1,12 +1,8 @@
 
-class DcMotor {
-	public static void setPower(double power) {
-		System.out.println(power);
-	};
-};
-
 class main {
-	/*
+	public static void main(String[] args) {
+		System.out.println("AHHHH");
+		/*
 Hello. Welcome to the Code Editor.
 This is where you will write your java code.
 
@@ -16,25 +12,16 @@ To exit, press [Ctrl+X]
 
 /*
 Your requirements for this assignment are:
-For your first task, create a method that squares a number then returns the squared number.
-For your second task, create a FTC main method (called 'runOpMode') that runs the method from the first task, inputting the number 5.
-For you third task, create a DcMotor object in the main method and set its power to the output of the second task.
+There are no requirements. Just press Ctrl+X to continue.
 */
 
 /*
 Remember to add a ; at the end of every line.
 Start coding after this comment ends.
 */
-public static void runOpMode() {
-System.out.println(25.0);
-};
 
 
-	public static void main(String[] args) {
-	    runOpMode();
-	}
+	};
 }
-
-
 
 
